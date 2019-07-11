@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Guessing Game</title>
+</head>
+<body onload="guess()">
+
+<script>
+    function guess()
+    {
+        var guess = prompt("I have chosen a number between 1 and 10. Try to guess it.");
+        document.write("I have chosen a number between 1 and 10. Try to guess it.");
+        document.write("<br>");
+        var secret_number = 6;
+        while(guess != secret_number)
+        {
+            document.write("Your Guess: "+guess);
+            document.write("<br>");
+            document.write("That is incorrect. Guess again.");
+            document.write("<br>");
+            guess = window.prompt("That is incorrect. Guess again.");
+        }
+        document.write("Your Guess: "+guess+"");
+        document.write("<br>");
+        document.write("That's right! You're a good guesser.")
+    }
+</script>
+</body>
+</html>

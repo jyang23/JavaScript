@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<label for="wind">Select the wind speed today: </label>
+<select id="wind">
+    <option value="">--Make a choice--</option>
+    <option value="1">74-95</option>
+    <option value="2">96-110</option>
+    <option value="3">111-130</option>
+    <option value="4">131-155</option>
+    <option value="5">155 and Above</option>
+</select>
+
+<p></p>
+
+<script>
+    var select = document.querySelector('select');
+    var para = document.querySelector('p');
+    select.onchange = setwind;
+    function setwind() {
+        var choice = select.value;
+        if(choice === '1') {
+            para.textContent = 'Hurricane Wind Speed Category is 1';
+        } else if(choice === '2') {
+            para.textContent = 'Hurricane Wind Speed Category is 2';
+        } else if(choice === '3') {
+            para.textContent = 'Hurricane Wind Speed Category is 3';
+        } else if(choice === '4') {
+            para.textContent = 'Hurricane Wind Speed Category is 4';
+        } else if(choice === '5') {
+            para.textContent = 'Hurricane Wind Speed Category is 5';
+        } else {
+            para.textContent = '';
+        }
+    }
+</script>
+</body>
+</html>
